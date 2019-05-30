@@ -1,2 +1,2 @@
-# PokeDash-Project
+# PokeDash-AI
 AI Experiment
