@@ -1,5 +1,4 @@
-# PokeDash-AI
-AI Experiment
+# PokeDash-AI: An AI Experiment
 
 ## Introduction
 
