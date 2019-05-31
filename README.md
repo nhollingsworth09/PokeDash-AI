@@ -5,7 +5,9 @@
 ## Baselines
 ### Random Model
 
-![Random Model](visuals/random_model.gif)
+<div class="center">
+  ![Random Model](visuals/random_model.gif)
+</div>
 
 ### Manual Model
 
