@@ -4,6 +4,9 @@
 
 ## Baselines
 ### Random Model
+
+![Random Model](visuals/random_model.gif)
+
 ### Manual Model
 
 ## DQN Model
