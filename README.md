@@ -9,7 +9,7 @@ The chosen game was Google's hidden T-Rex Runner; a great source of distraction 
 
 Thus, the model only needed to figure out when to jump, and when not to jump. Below is a snapshot of the hitboxes and a fictitious "view" from the player.
 
-![Player View](visuals/manual_view.png)
+![Player View](visuals/manual_view.jpg)
 
 Overview of Model:
 Inputs:
