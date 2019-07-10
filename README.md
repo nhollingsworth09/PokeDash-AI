@@ -30,6 +30,10 @@ Of course, it would be remiss of me to ask my model to solve something I could n
 
 ## DQN Model
 
+A DQN (Deep Q-Network) uses neural networks to train an agent (our player) based on game states it has seen before. As more states are stores into memory, the DQN estimates the best possible action. For a more in-depth explaination, feel free to read [this](https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287) _Towards Data Science_ article that touches on the topic.
+
+In our game environment, values are assigned to each state with the intention of having the model estimate actions that would produce the highest value from the subsequent state.
+
 ## Results
 ![Historical Performance](visuals/history.png)
 
@@ -41,3 +45,10 @@ Of course, it would be remiss of me to ask my model to solve something I could n
 
 ## References
 * Inspiration for Python Code: https://github.com/shivamshekhar/Chrome-T-Rex-Rush
+* DQN Implementation: https://jaromiru.com/2016/10/03/lets-make-a-dqn-implementation/
+* Creating a custom GYM environment: https://www.novatec-gmbh.de/en/blog/creating-a-gym-environment/
+* And many other articles including:
+  - https://keon.io/deep-q-learning/
+  - https://medium.com/@apoddar573/making-your-own-custom-environment-in-gym-c3b65ff8cdaa
+  - https://skymind.ai/wiki/deep-reinforcement-learning
+  - https://adventuresinmachinelearning.com/reinforcement-learning-tutorial-python-keras/
