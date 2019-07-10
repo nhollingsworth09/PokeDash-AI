@@ -11,9 +11,11 @@ Thus, the model only needed to figure out when to jump, and when not to jump. Be
 
 ![Player View](visuals/manual_view.jpg)
 
-Overview of Model:
-Inputs:
-Outputs:
+**Overview of Model**:
+* Inputs:
+  - abc
+* Outputs:
+  - def
 
 ## Baselines
 
