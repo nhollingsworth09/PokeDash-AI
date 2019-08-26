@@ -48,7 +48,7 @@ In our game environment, values are assigned to each state with the intention of
 
 * Based on information stores from each state, the sample space could potentially be to large. Again, this is an issue with limited memory. As such, I've limited the sample space limiting the inputs to the player center location, a true/false value for jumping, and the object distance. However, for each pixel, this creates thousands of potential states.
 
-* To simplify experimentation, the neural network that serves as the brain for the model was kept basic. It is a 3-layer network with the outputs being a decision to jump or not to jump. A more complex network may solve instability issues. Additionally, completely revamping the appraoch to use a CNN may prove fruitful. This leaves the model to make it's own decisions based on a view of the whole screen instead of my selected inputs.
+* To simplify experimentation, the neural network that serves as the brain for the model was kept basic. It is a 3-layer network with the outputs being a decision to jump or not to jump. A more complex network may solve instability issues. Additionally, completely revamping the appraoch to use a Convolution Neural Network may prove fruitful. A CNN would allow model to make its decisions based on a view of the whole screen instead of my selected inputs.
 
 * This is my first time attempting both PyGame and OpenAI environments. As a result, the code is not as optimized as it can be and may be impacting learning capabilities.
 
