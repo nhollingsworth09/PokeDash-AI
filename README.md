@@ -3,7 +3,7 @@ _Disclaimer: I would not consider this code clean and error-free, thus it is not
 ## Introduction
 After completing an introductory course into Deep Learning, I finally had a basic understanding sufficient enough to start a project that I've been itching to do for a while. The challenge is simple: "Can I create an neural network that can learn to play a game?"
 
-The first few weeks of 2019 was spent learning how to use [PyGame](https://www.pygame.org/docs/), an Open Source python package allowing user to design and build multimedia applications such as games. At the beginning of June, I gave myself two weeks to build the game then train a reinforcement learning algoritm ontop of it.
+The first few weeks of 2019 was spent learning how to use [PyGame](https://www.pygame.org/docs/), an Open Source python package allowing user to design and build multimedia applications such as games. At the beginning of June, I gave myself two weeks to build [the game](https://github.com/nhollingsworth09/PokeDash) then train a reinforcement learning algoritm ontop of it.
 
 The chosen game was Google's hidden T-Rex Runner; a great source of distraction as you wait for your modem to restart. In order to not let my sample space be too large, I did not incorporate the ability to _duck_ or include flying obstacles (my 6GB of RAM would cry).
 
@@ -13,9 +13,11 @@ Thus, the model only needed to figure out when to jump, and when not to jump. Be
 
 **Overview of Model**:
 * Inputs:
-  - abc
+  - Player distance to the next cactus
+  - Player center as a vector of length 2: [x location, y location]
+  - Jumping flag as a boolean value of True/False
 * Outputs:
-  - def
+  - Player reaction as a boolian value: [Jump/True, Do Nothing,/False]
 
 ## Baselines
 
@@ -41,9 +43,15 @@ In our game environment, values are assigned to each state with the intention of
 
 ![DQN Model](visuals/best_model.gif)
 
-## Key Takeaways
+## Key Takeaways & Future Considerations
+* This Q-Learning model depends on a memory bank of states already encountered to find the appropriate response. Due to memory limtations, this may not be large enough. Added to that, the states selected by the model for memory is random. A larger memory bank may stabilize learning.
 
-## Future Considerations
+* Based on information stores from each state, the sample space could potentially be to large. Again, this is an issue with limited memory. As such, I've limited the sample space limiting the inputs to the player center location, a true/false value for jumping, and the object distance. However, for each pixel, this creates thousands of potential states.
+
+* To simplify experimentation, the neural network that serves as the brain for the model was kept basic. It is a 3-layer network with the outputs being a decision to jump or not to jump. A more complex network may solve instability issues. Additionally, completely revamping the appraoch to use a CNN may prove fruitful. This leaves the model to make it's own decisions based on a view of the whole screen instead of my selected inputs.
+
+* This is my first time attempting both PyGame and OpenAI environments. As a result, the code is not as optimized as it can be and may be impacting learning capabilities.
+
 
 ## References
 * Inspiration for Python Code: https://github.com/shivamshekhar/Chrome-T-Rex-Rush
