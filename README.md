@@ -36,7 +36,12 @@ Of course, it would be remiss of me to ask my model to solve something I could n
 
 A DQN (Deep Q-Network) uses neural networks to train an agent (our player) based on game states it has seen before. As more states are stores into memory, the DQN estimates the best possible action. For a more in-depth explaination, feel free to read [this](https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287) _Towards Data Science_ article that touches on the topic.
 
-In our game environment, values are assigned to each state with the intention of having the model estimate actions that would produce the highest value from the subsequent state.
+In our game environment, values are assigned to each state with the intention of having the model estimate actions that would produce the highest value from the subsequent state. Value assignment are indicated below:
+ 
+- Player is jumping above the cactus: +10
+- Player is jumping with no cactus: -5
+- Player is not jumping when there is no cactus: 1
+- Player died: -10
 
 ## Results
 ![Historical Performance](visuals/history.png)
